@@ -69,6 +69,7 @@ public class TestConfigurations {
     public static String getCollaborator() {
         return read("collaborator");
     }
+
     public static String getUserCookie(){
         return read("userCookie");
     }
@@ -77,7 +78,13 @@ public class TestConfigurations {
         return read("api_uri");
     }
 
+    public static String getTestGitUri() { return read("testGit_uri"); }
+
     public static String getApiToken() {
         return read("api_token");
+    }
+
+    public static String getGitToken() {
+        return read("tokenTestGit");
     }
 }
