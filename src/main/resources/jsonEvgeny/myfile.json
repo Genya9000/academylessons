@@ -1,0 +1,21 @@
+{
+  "teacherName": "Garibaldy",
+  "students": [
+    {
+      "name": "Piter",
+      "age": 20,
+      "subjects": [
+        "history",
+        "biology"
+      ]
+    },
+    {
+      "name": "Ivan",
+      "age": 21,
+      "subjects": [
+        "physics",
+        "literature"
+      ]
+    }
+  ]
+}
