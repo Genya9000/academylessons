@@ -23,13 +23,16 @@ public class JsonRunner {
     Gson gson = new GsonBuilder().setPrettyPrinting().create();
     String serializedTeacher = gson.toJson(teacher);
 
-        System.out.println(FileUtils
+    System.out.println(FileUtils
                 .readFileToString(new File("src/main/resources/jsonEvgeny/issueComment.json"), StandardCharsets
                         .UTF_8));
 
-        File myfile = new File("src/main/resources/jsonEvgeny/commentResponse.json");
+    File myfile = new File("src/main/resources/jsonEvgeny/commentResponse.json");
         FileUtils.writeStringToFile(myfile, serializedTeacher,
                 StandardCharsets.UTF_8.name());
+
+        Teacher teacher1 = gson.fromJson(serializedTeacher, Teacher.class);
+        System.out.println(teacher1.toString());
 
 
 
