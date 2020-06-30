@@ -1,11 +1,14 @@
 package org.academy.utils.web;
 
 import lombok.extern.slf4j.Slf4j;
+import org.awaitility.Awaitility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.concurrent.TimeUnit;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
 
@@ -36,5 +39,10 @@ public class WebWaiters {
 
 	public static void waitUntilElementIsClickable(WebDriver webDriver, WebElement element){
 		new WebDriverWait(webDriver, timeForWaiting).until(ExpectedConditions.elementToBeClickable(element));
+	}
+	public static void waitUntilElementIsDisplayed(WebElement el, int timeOutInSeconds){
+		Awaitility.await().atMost(timeOutInSeconds, TimeUnit.SECONDS)
+				.ignoreExceptions()
+				.until(el::isDisplayed);
 	}
 }
