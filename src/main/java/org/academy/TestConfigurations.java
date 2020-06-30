@@ -87,4 +87,8 @@ public class TestConfigurations {
     public static String getGitToken() {
         return read("tokenTestGit");
     }
+
+    public static String getAccessPageUri() {
+        return read("access_uri");
+    }
 }

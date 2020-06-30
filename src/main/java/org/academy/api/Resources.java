@@ -19,4 +19,8 @@ public class Resources {
     public static String getCommentFromIssue17() {
         return read("comment17");
     }
+
+    public static String getCollaboratorName() {
+        return read("collaborator");
+    }
 }
