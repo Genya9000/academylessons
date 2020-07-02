@@ -21,6 +21,9 @@ public class AccessPage extends AbstractPage {
     @FindBy(xpath = "//summary[@class='close-button btn-octicon-danger']")
     private WebElement deleteButton;
 
+    @FindBy(xpath = "//button[contains(text(), 'EvgenKhaliman')]")
+    private WebElement confirmButton;
+
     public boolean isLinkPresent(){
 
         WebWaiters.waitUntilElementIsDisplayed(collaboratorLinks.get(1), 20);
@@ -30,6 +33,9 @@ public class AccessPage extends AbstractPage {
     public void deleteLink(){
         WebWaiters.waitUntilElementIsDisplayed(deleteButton, 20);
         deleteButton.click();
+        WebWaiters.waitUntilElementIsDisplayed(confirmButton, 20);
+        confirmButton.click();
+
     }
 }
 

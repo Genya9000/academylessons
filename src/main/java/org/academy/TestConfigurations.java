@@ -1,5 +1,7 @@
 package org.academy;
 
+import java.util.Base64;
+
 public class TestConfigurations {
 
     private static String read(String value) {
@@ -15,7 +17,9 @@ public class TestConfigurations {
     }
 
     public static String getPassword() {
-        return read("pass");
+
+         return new String(Base64.getDecoder()
+                 .decode(read("pass")));
     }
 
     public static String getLogin() {
@@ -85,7 +89,9 @@ public class TestConfigurations {
     }
 
     public static String getGitToken() {
-        return read("tokenTestGit");
+
+        return new String(Base64.getDecoder()
+                .decode(read("tokenTestGit")));
     }
 
     public static String getAccessPageUri() {

@@ -13,7 +13,7 @@ public class ApiWaiter {
     public ValidatableResponse waitForResponse(ValidateResponseWaiter validateResponseWaiter, int responseCode) {
         final ValidatableResponse[] validatableResponse = new ValidatableResponse[1];
         try {
-            Awaitility.await().atMost(100, TimeUnit.SECONDS)
+            Awaitility.await().atMost(15, TimeUnit.SECONDS)
                     .with()
                     .until(() -> {
                         validatableResponse[0] = validateResponseWaiter.validatableResponse();
