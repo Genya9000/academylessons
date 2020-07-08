@@ -24,7 +24,7 @@
                 <version>3.0.0-M4</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>testngxml/testng.xml</suiteXmlFile>
+                        <suiteXmlFile>testngxml/main.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
