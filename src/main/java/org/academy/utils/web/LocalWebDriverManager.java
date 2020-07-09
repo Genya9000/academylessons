@@ -37,7 +37,7 @@ public class LocalWebDriverManager {
             case "chrome_remote":
                 DesiredCapabilities capabilities = new DesiredCapabilities();
                 capabilities.setBrowserName("chrome");
-                capabilities.setVersion("81.0");
+                capabilities.setVersion("83.0");
                 capabilities.setCapability("enableVNC", true);
                 capabilities.setCapability("enableVideo", false);
 
