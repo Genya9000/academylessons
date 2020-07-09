@@ -50,7 +50,7 @@ public class LocalWebDriverManager {
                 } catch (MalformedURLException e) {
                     e.printStackTrace();
                 }
-                driver.manage().timeouts().implicitlyWait(40000, TimeUnit.MILLISECONDS);
+                driver.manage().timeouts().implicitlyWait(60000, TimeUnit.MILLISECONDS);
                 driver.manage().window().maximize();
                 return driver;
             case "remote":
